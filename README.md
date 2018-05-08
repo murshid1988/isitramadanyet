@@ -1,2 +1,2 @@
-# isitramadanyet
-Letting you know is it Ramadan yet
+# Is it Ramadan yet
+Letting you know whether it is Ramadan yet
