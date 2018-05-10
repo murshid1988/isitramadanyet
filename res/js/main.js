@@ -6,7 +6,7 @@ var strmonth = '';
 var year = now.getFullYear();
 var day = now.getDate();
 var strday = '';
-var endpoint = 'http://api.aladhan.com/gToH';
+var endpoint = 'https://api.aladhan.com/gToH';
 
 if (month < 10) {
     strmonth = '0'+ month.toString();
@@ -32,7 +32,7 @@ http.onload = () => {
     if(res.code == 200) {
         if(res.data.hijri.month.number <= 9) {
             console.log ("This hijri month is", res.data.hijri.month.number);
-            http.open("GET", 'http://api.aladhan.com/hToG'+'?date=01-09-'+ res.data.hijri.year);
+            http.open("GET", 'https://api.aladhan.com/hToG'+'?date=01-09-'+ res.data.hijri.year);
             http.send();
             http.onload = () => {
                 res = JSON.parse(http.responseText);
@@ -59,7 +59,7 @@ http.onload = () => {
         }  else {
             console.log ("This hijri month is", res.data.hijri.month.number);
             var tmphijri = parseInt(res.data.hijri.year)+1;
-            http.open("GET", 'http://api.aladhan.com/hToG'+'?date=01-09-'+ tmphijri);
+            http.open("GET", 'https://api.aladhan.com/hToG'+'?date=01-09-'+ tmphijri);
             http.send();
             http.onload = () => {
                 res = JSON.parse(http.responseText);
