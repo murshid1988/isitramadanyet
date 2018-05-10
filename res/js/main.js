@@ -51,9 +51,9 @@ http.onload = () => {
                     element.innerHTML = "<h2>" + diffDays + " days to go </h2> <span class='sub-text'> +/- 1 day depending on the sighting of the moon.</span> <br> <span class='sub-text'> Will be on "+ date2.toDateString() +"<span>";
                 } else if (diffDays<0) {
                     diffDays = Math.abs(diffDays);
-                    element.innerHTML = "<h2>" + diffDays + " days ago </h2> <span class='sub-text'> +/- 1 day depending on the sighting of the moon.</span>";
+                    element.innerHTML = "<h2>" + diffDays + " days ago </h2> <span class='sub-text'> +/- 1 day depending on the sighting of the moon.</span> <span class='sub-text'> Was on "+ date2.toDateString() +"<span>";
                 } else if (diffDays==0) {
-                    element.innerHTML = "<h2> It is today </h2> <span class='sub-text'> Or yesterday or tomorrow depending on the sighting of the moon. </span>";
+                    element.innerHTML = "<h2> It is today </h2> <span class='sub-text'> Or yesterday or tomorrow depending on the sighting of the moon. </span> <span class='sub-text'> Is on "+ date2.toDateString() +"<span>";
                 }
             }
         }  else {
@@ -74,7 +74,7 @@ http.onload = () => {
                 console.log("Day2", date2);
                 console.log(diffDays);
                 var element = document.getElementById('days-to-go');
-                element.innerHTML = "<h2>" + diffDays + " days to go </h2> <span class='sub-text'> +/- 1 day </span>";
+                element.innerHTML = "<h2>" + diffDays + " days to go </h2> <span class='sub-text'> +/- 1 day </span> <span class='sub-text'> Will be on "+ date2.toDateString() +"<span>";
             }
         }
 
